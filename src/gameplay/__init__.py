@@ -1,1 +1,2 @@
-from .gameplay import Gameplay
+from .gameplay import *
+from .object import *
