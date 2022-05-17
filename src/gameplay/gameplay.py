@@ -54,9 +54,12 @@ class Gameplay:
             for j in range(self.n_cols):
                 tile = self.tiles[i,j]
                 for obj in tile.objects:
-                    for rule in self.rules:
-                        if obj.name == rule.first:
-                            obj.property = rule.second
+                    if obj.name != 'word':
+                        obj.property = ''
+                        for rule in self.rules:
+                            if obj.name == rule.first:
+                                obj.property = rule.second
+
 
     # find a block upward (continuous)
     # return block size if the block can be moved up

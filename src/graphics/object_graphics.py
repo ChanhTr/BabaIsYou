@@ -12,42 +12,42 @@ class BabaGraphic(Baba):
         # baba_resized = pygame.transform.scale(baba_image,(baba_image.get_width()/6, baba_image.get_height()/6))
         baba_resized = pygame.transform.scale(baba_image,(40,40))
         window.blit(baba_resized,[x,y])
-        pass
+        
 
 class RockGraphic(Rock):
     def render(self, window, x, y):
         rock_image = pygame.image.load(os.path.join(current_dir, "../../resources/graphics/rock.png"))
         rock_resized = pygame.transform.scale(rock_image,(40,40))
         window.blit(rock_resized,[x,y])
-        pass
+        
 
 class WaterGraphic(Water):
     def render(self, window, x, y):
         water_image = pygame.image.load(os.path.join(current_dir, "../../resources/graphics/water.png"))
         water_resized = pygame.transform.scale(water_image,(40,40))
         window.blit(water_resized,[x,y])
-        pass
+        
 
 class WallGraphic(Wall):
     def render(self, window, x, y):
         wall_image = pygame.image.load(os.path.join(current_dir, "../../resources/graphics/wall.png"))
         wall_resized = pygame.transform.scale(wall_image,(40,40))
         window.blit(wall_resized,[x,y])
-        pass
+        
 
 class FlagGraphic(Flag):
     def render(self, window, x, y):
         flag_image = pygame.image.load(os.path.join(current_dir, "../../resources/graphics/flag.png"))
         flag_resized = pygame.transform.scale(flag_image,(40,40))
         window.blit(flag_resized,[x,y])
-        pass
+        
 
 class SkullGraphic(Skull):
     def render(self, window, x, y):
         skull_image = pygame.image.load(os.path.join(current_dir, "../../resources/graphics/skull.png"))
         skull_resized = pygame.transform.scale(skull_image,(40,40))
         window.blit(skull_resized,[x,y])
-        pass
+        
 
 class WordGraphic(Word):
     def render(self, window, x, y):
@@ -55,7 +55,7 @@ class WordGraphic(Word):
         png_image = pygame.image.load(os.path.join(current_dir, png_file_name))
         png_image_resized = pygame.transform.scale(png_image,(40,40))
         window.blit(png_image_resized, [x,y])
-        pass
+
 
 if __name__ == '__main__':
         # initialize the pygame module

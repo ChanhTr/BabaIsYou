@@ -52,5 +52,5 @@ class Skull(Object):
 
 class Word(Object):
     def __init__(self, value):
-        super().__init__('','push')
+        super().__init__('push','word')
         self.value = value
