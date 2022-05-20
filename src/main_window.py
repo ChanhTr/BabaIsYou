@@ -1,9 +1,9 @@
 import sys
-sys.path.append("D:\Study\Python\Project\BabaIsYou\src")
-
-import pygame
 import os
 current_dir = os.path.dirname(__file__)
+sys.path.append(os.path.join(current_dir, "."))
+
+import pygame
 
 from graphics import GameplayGraphics
 
@@ -18,7 +18,7 @@ class MainWindow():
         self.window_height = 900
 
         self.screen = pygame.display.set_mode((self.window_width,self.window_height))
-        self.background_music = pygame.mixer.music.load('D:/Study/Python/Project/BabaIsYou/resources/graphics/Music.mp3')
+        self.background_music = pygame.mixer.music.load(os.path.join(current_dir, '../resources/graphics/Music.mp3'))
         pygame.mixer.music.play()
         pygame.mixer.music.set_volume(0.1)
 

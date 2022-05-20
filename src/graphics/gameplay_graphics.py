@@ -1,9 +1,9 @@
 import sys
-
-sys.path.append("D:\Study\Python\Project\BabaIsYou\src")
+import os
+current_dir = os.path.dirname(__file__)
+sys.path.append(os.path.join(current_dir, "."))
 
 import pygame
-import os
 import numpy as np
 import pandas as pd
 from graphics.object_graphics import *

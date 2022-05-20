@@ -1,51 +1,74 @@
 import sys
-sys.path.append("D:\Study\Python\Project\BabaIsYou\src")
+import os
+current_dir = os.path.dirname(__file__)
+sys.path.append(os.path.join(current_dir, "."))
 
 from gameplay import Baba, Rock, Water, Wall, Flag, Skull, Word
 import pygame
-import os
-current_dir = os.path.dirname(__file__)
 
 class BabaGraphic(Baba):
+    # static variable 
+    baba_image = None
+
     def render(self, window, x, y):
-        baba_image = pygame.image.load(os.path.join(current_dir, "../../resources/graphics/baba.png"))
-        # baba_resized = pygame.transform.scale(baba_image,(baba_image.get_width()/6, baba_image.get_height()/6))
-        baba_resized = pygame.transform.scale(baba_image,(40,40))
+        if BabaGraphic.baba_image == None:
+            BabaGraphic.baba_image = pygame.image.load(os.path.join(current_dir, "../../resources/graphics/baba.png"))
+        baba_resized = pygame.transform.scale(BabaGraphic.baba_image,(40,40))
         window.blit(baba_resized,[x,y])
         
 
 class RockGraphic(Rock):
+    # static variable 
+    rock_image = None
+
     def render(self, window, x, y):
-        rock_image = pygame.image.load(os.path.join(current_dir, "../../resources/graphics/rock.png"))
-        rock_resized = pygame.transform.scale(rock_image,(40,40))
+        if RockGraphic.rock_image == None:
+            RockGraphic.rock_image = pygame.image.load(os.path.join(current_dir, "../../resources/graphics/rock.png"))
+        rock_resized = pygame.transform.scale(RockGraphic.rock_image,(40,40))
         window.blit(rock_resized,[x,y])
         
 
 class WaterGraphic(Water):
+    # static variable 
+    water_image = None
+
     def render(self, window, x, y):
-        water_image = pygame.image.load(os.path.join(current_dir, "../../resources/graphics/water.png"))
-        water_resized = pygame.transform.scale(water_image,(40,40))
+        if WaterGraphic.water_image == None:
+            WaterGraphic.water_image = pygame.image.load(os.path.join(current_dir, "../../resources/graphics/water.png"))
+        water_resized = pygame.transform.scale(WaterGraphic.water_image,(40,40))
         window.blit(water_resized,[x,y])
         
 
 class WallGraphic(Wall):
+    # static variable 
+    wall_image = None
+
     def render(self, window, x, y):
-        wall_image = pygame.image.load(os.path.join(current_dir, "../../resources/graphics/wall.png"))
-        wall_resized = pygame.transform.scale(wall_image,(40,40))
+        if WallGraphic.wall_image == None:
+            WallGraphic.wall_image = pygame.image.load(os.path.join(current_dir, "../../resources/graphics/wall.png"))
+        wall_resized = pygame.transform.scale(WallGraphic.wall_image,(40,40))
         window.blit(wall_resized,[x,y])
         
 
 class FlagGraphic(Flag):
+    # static variable 
+    flag_image = None
+
     def render(self, window, x, y):
-        flag_image = pygame.image.load(os.path.join(current_dir, "../../resources/graphics/flag.png"))
-        flag_resized = pygame.transform.scale(flag_image,(40,40))
+        if FlagGraphic.flag_image == None:
+            FlagGraphic.flag_image = pygame.image.load(os.path.join(current_dir, "../../resources/graphics/flag.png"))
+        flag_resized = pygame.transform.scale(FlagGraphic.flag_image,(40,40))
         window.blit(flag_resized,[x,y])
         
 
 class SkullGraphic(Skull):
+    # static variable 
+    skull_image = None
+
     def render(self, window, x, y):
-        skull_image = pygame.image.load(os.path.join(current_dir, "../../resources/graphics/skull.png"))
-        skull_resized = pygame.transform.scale(skull_image,(40,40))
+        if SkullGraphic.skull_image == None:
+            SkullGraphic.skull_image = pygame.image.load(os.path.join(current_dir, "../../resources/graphics/skull.png"))
+        skull_resized = pygame.transform.scale(SkullGraphic.skull_image,(40,40))
         window.blit(skull_resized,[x,y])
         
 

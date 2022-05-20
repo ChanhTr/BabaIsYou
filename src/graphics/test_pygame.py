@@ -1,9 +1,11 @@
 # import the pygame module, so you can use it
-import pygame
-import os
 
+import sys
+import os
 current_dir = os.path.dirname(__file__)
- 
+sys.path.append(os.path.join(current_dir, "."))
+
+import pygame
 # define a main function
 def main():
      
